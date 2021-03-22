@@ -39,11 +39,15 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .logo {
-  color: #FCA311;
+  color: #fca311;
   font-weight: bold;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 header ul {
@@ -67,7 +71,7 @@ header ul a {
   color: white;
   display: -ms-grid;
   display: grid;
-  text-align: center;
+  text-align: left;
   padding: 4em;
 }
 
@@ -75,7 +79,7 @@ header ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
+  margin: 0;
   width: 200px;
   font-weight: bold;
   color: #ff64cb;
@@ -106,7 +110,7 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: #E5E5E5;
+  background: #e5e5e5;
   top: 90px;
   left: 0;
   z-index: -1;
@@ -350,33 +354,27 @@ section {
   }
 }
 
-.circle {
-  animation: circleAnim 1s infinite alternate-reverse;
+.arrows {
+  -webkit-animation: arrows 2s infinite;
+          animation: arrows 2s infinite;
+  position: relative;
 }
 
-@-webkit-keyframes circleAnim {
+@-webkit-keyframes arrows {
   from {
-    -webkit-transform: translate(262px, 798px);
-            transform: translate(262px, 798px);
-    z-index: 5;
+    top: 0;
   }
   to {
-    -webkit-transform: translate(262px, 830px);
-            transform: translate(262px, 830px);
-    z-index: 5;
+    top: 30px;
   }
 }
 
-@keyframes circleAnim {
+@keyframes arrows {
   from {
-    -webkit-transform: translate(262px, 798px);
-            transform: translate(262px, 798px);
-    z-index: 5;
+    top: 0;
   }
   to {
-    -webkit-transform: translate(262px, 830px);
-            transform: translate(262px, 830px);
-    z-index: 5;
+    top: 30px;
   }
 }
 
